@@ -3,6 +3,8 @@ import ContentWrapper from '../Layout/ContentWrapper';
 import { Grid, Row, Col, Panel, Button, Table, Pagination, Modal, DropdownButton, MenuItem, FormControl } from 'react-bootstrap';
 import AuthService from '../../authService'
 import Cache from '../../utils/Cache'
+import UtilService from '../../utils/Utils'
+import Config from '../../config'
 
 import Api from './api'
 
@@ -23,7 +25,8 @@ class Payment extends React.Component {
     }
 
     componentDidMount(){
-        
+        var email = sessionStorage.getItem('email')
+        this.setState({email: email})
     }
 
     onApply(e){
@@ -34,9 +37,12 @@ class Payment extends React.Component {
             old_password: this.state.old_password,
             new_password: this.state.new_password,
         }, (err, res)=>{
+            console.log('err, res', err, res)
             if ( err == null ){
+                console.log("success!")
                 this.setState({mismatch: false, info: true})
             } else {
+                console.log("fail!")
                 this.setState({mismatch: true, info: false})
             }
         })

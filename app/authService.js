@@ -23,9 +23,21 @@ module.exports = {
             success: function (data) {
                 if (cb) cb(null, data)
             },
-            failure: function (errMsg) {
+            error: function (errMsg) {
                 if (cb) cb(errMsg, null)
             }
+        })
+    },
+
+    getList(sub_url, cb) {
+        $.ajax({
+            url: Config.BACKEND_API_URL + sub_url,
+            method: 'GET',
+            dataType: "json"
+        }).then((res) => {
+            if (cb) cb(null, res)
+        }, (error) => {
+            if (cb) cb(error.responseText, null)
         })
     },
 

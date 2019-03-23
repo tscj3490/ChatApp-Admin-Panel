@@ -27,7 +27,7 @@ var OtherApi = {
             success: function(data){
                 if (cb) cb(null, data)
             },
-            failure: function(errMsg){
+            error: function(errMsg){
                 if (cb) cb(errMsg, null)
             }
         })
@@ -49,7 +49,7 @@ var OtherApi = {
 
     changePassword(data, cb) {
         this.postItem('/api/v1/admin/changePassword', data, (err, res) => {
-            cb(null, res)
+            cb(err, res)
         })
     },
     

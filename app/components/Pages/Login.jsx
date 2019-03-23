@@ -37,7 +37,7 @@ class Login extends React.Component {
             if (err == null){
                 console.log("true : ")
                 Cache.login = true        
-                this.props.history.push("dashboard1")
+                this.props.history.push("users")
             }else{
                 console.log("false : ")
                 this.setState({error:'Email or Password is wrong!'})

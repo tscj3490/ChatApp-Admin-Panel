@@ -165,9 +165,9 @@ class User extends React.Component {
                     <Table id="table-ext-1" responsive bordered hover>
                         <thead>
                             <tr>
-                                <th className="text-center">ID
+                                {/* <th className="text-center">ID */}
                                     {/* <input style={{ minWidth: 30 }} className="search-box" type="text" value={this.state.filterID} onChange={e => this.changeFilter('filterID', e)} /> */}
-                                </th>
+                                {/* </th> */}
                                 <th className="text-center">Name</th>
                                 <th className="text-center">Email</th>   
                                 <th className="text-center">Phone</th>                             
@@ -176,7 +176,7 @@ class User extends React.Component {
                                 <th className="text-center">Team</th>
                                 <th className="text-center">Company</th>
                                 <th className="text-center">Code</th>
-                                <th className="text-center">Deleted</th>
+                                {/* <th className="text-center">Deleted</th> */}
                                 <th className="text-center">IsVerified</th>
                                 <th className="text-center">UpdatedAt</th>
                                 <th className="text-center">Action</th>
@@ -193,7 +193,7 @@ class User extends React.Component {
                         <tbody>
                             {!!this.state.users && this.state.users.map((item, index) =>
                                 <tr key={index}>
-                                    <td className="text-center">{item.id}</td>                                    
+                                    {/* <td className="text-center">{item.id}</td>                                     */}
                                     <td className="text-center">{item.name}</td>
                                     <td className="text-center">{item.email}</td>
                                     <td className="text-center">{item.phone}</td>
@@ -206,10 +206,10 @@ class User extends React.Component {
                                     <td className="text-center">{item.team_name}</td>
                                     <td className="text-center">{item.company_name}</td>
                                     <td className="text-center">{item.code}</td>
-                                    <td className="text-center">
+                                    {/* <td className="text-center">
                                         {item.deleted == 1 && <span className="label label-success">Undeleted</span>}
                                         {item.deleted == 0 && <span className="label label-default">Deleted</span>}
-                                    </td>
+                                    </td> */}
                                     <td className="text-center">
                                         {item.activated == 1 && <span className="label label-success">Verified</span>}
                                         {item.activated == 0 && <span className="label label-default">Unverified</span>}

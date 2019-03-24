@@ -189,7 +189,7 @@ class Team extends React.Component {
                     <Table responsive bordered className="text-center">
                         <thead>
                             <tr>
-                                <th className="text-center">Id</th>
+                                {/* <th className="text-center">Id</th> */}
                                 <th className="text-center">Name</th>
                                 <th className="text-center">Logo</th>
                                 <th className="text-center">Company</th>
@@ -200,14 +200,14 @@ class Team extends React.Component {
                             {this.state.teams.map((item, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{item.id}</td>
+                                        {/* <td>{item.id}</td> */}
                                         <td>{item.name}</td>
                                         <td>
                                             <div className="media">
                                                 <img src={config.BACKEND_FILE_URL + item.logo} alt="Image" className="img-responsive" />
                                             </div>
                                         </td>
-                                        <td style={{ maxWidth: 150 }} className="text-overflow">{item.company_name}</td>
+                                        <td className="text-overflow">{item.company_name}</td>
                                         <td>{item.updated_at}</td>
                                         <td className="text-nowrap">
                                             <Button className="btn btn-info fa fa-edit btn-sm" onClick={() => this.showModal(index, false)} />

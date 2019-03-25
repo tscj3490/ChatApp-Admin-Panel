@@ -180,14 +180,14 @@ class User extends React.Component {
                                 <th className="text-center">IsVerified</th>
                                 <th className="text-center">UpdatedAt</th>
                                 <th className="text-center">Action</th>
-                                <th data-check-all="data-check-all">
+                                {/* <th data-check-all="data-check-all">
                                     <div data-toggle="tooltip" data-title="Check All" className="checkbox c-checkbox">
                                         <label>
                                             <input type="checkbox" />
                                             <em className="fa fa-check"></em>
                                         </label>
                                     </div>
-                                </th>
+                                </th> */}
                             </tr>
                         </thead>
                         <tbody>
@@ -217,7 +217,7 @@ class User extends React.Component {
 
                                     <td className="text-center">{item.updated_at}</td>
                                     <td className="text-nowrap">
-                                        <Button className="btn btn-info fa fa-edit btn-sm" onClick={() => this.editItem(index)} />
+                                        {/* <Button className="btn btn-info fa fa-edit btn-sm" onClick={() => this.editItem(index)} /> */}
                                         <Button className="btn btn-danger fa fa-trash btn-sm" onClick={() => this.deleteItem(index)} />
                                     </td>
                                     <td>

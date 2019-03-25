@@ -61,6 +61,7 @@ class UserEdit extends React.Component {
                         phone: this.state.phone,
                         role: this.state.role,
                         company_name: this.state.company_name,
+                        team_name: this.state.team_name,
                         avatar: this.state.avatar,
                     }, (err1, res1) => {
                         this.setState({ isWaiting: true })
@@ -77,6 +78,7 @@ class UserEdit extends React.Component {
                     phone: this.state.phone,
                     role: this.state.role,
                     company_name: this.state.company_name,
+                    team_name: this.state.team_name,
                 }, (err, res) => {
                     this.setState({ isWaiting: true })
                     if (err1 == null && res1.error == null) {
@@ -96,6 +98,7 @@ class UserEdit extends React.Component {
                             phone: this.state.phone,
                             role: this.state.role,
                             company_name: this.state.company_name,
+                            team_name: this.state.team_name,
                             avatar: this.state.avatar,
                         }, (err1, res1) => {
                             this.setState({ isWaiting: true })
@@ -115,6 +118,7 @@ class UserEdit extends React.Component {
                     phone: this.state.phone,
                     role: this.state.role,
                     company_name: this.state.company_name,
+                    team_name: this.state.team_name,
                 }, (err, res) => {
                     this.setState({ isWaiting: true })
                     if (err == null && res.error == null) {

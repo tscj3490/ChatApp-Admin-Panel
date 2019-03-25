@@ -211,8 +211,8 @@ class User extends React.Component {
                                         {item.deleted == 0 && <span className="label label-default">Deleted</span>}
                                     </td> */}
                                     <td className="text-center">
-                                        {item.activated == 1 && <span className="label label-success">Verified</span>}
-                                        {item.activated == 0 && <span className="label label-default">Unverified</span>}
+                                        {item.is_verified == 1 && <span className="label label-success">Verified</span>}
+                                        {item.is_verified == 0 && <span className="label label-default">Unverified</span>}
                                     </td>
 
                                     <td className="text-center">{item.updated_at}</td>

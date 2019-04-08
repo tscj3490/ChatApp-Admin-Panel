@@ -216,7 +216,7 @@ class User extends React.Component {
                                     </td>
 
                                     <td className="text-center">{item.updated_at}</td>
-                                    <td className="text-nowrap">
+                                    <td className="text-center">
                                         {/* <Button className="btn btn-info fa fa-edit btn-sm" onClick={() => this.editItem(index)} /> */}
                                         <Button className="btn btn-danger fa fa-trash btn-sm" onClick={() => this.deleteItem(index)} />
                                     </td>

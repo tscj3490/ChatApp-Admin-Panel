@@ -10,6 +10,12 @@ import BaseHorizontal from './components/Layout/BaseHorizontal';
 import Donation from './components/Donation/Donation';
 import DonationEdit from './components/Donation/DonationEdit';
 
+import Chatroom from './components/Chatroom/Chatroom';
+import ChatroomEdit from './components/Chatroom/ChatroomEdit';
+
+import Reminder from './components/Reminder/Reminder';
+import ReminderEdit from './components/Reminder/ReminderEdit';
+
 import Team from './components/Team/Team';
 import TeamEdit from './components/Team/TeamEdit';
 
@@ -121,6 +127,14 @@ const Routes = ({ location }) => {
                                 {/* Team */}
                                 <Route path="/teams" component={Team} />
                                 <Route path="/team-edit" render={(props) => (!AuthService.isLogin() ? (<Redirect to="/login" />) : (<TeamEdit {...props} />))} />
+
+                                {/* Chatroom */}
+                                <Route path="/chatrooms" component={Chatroom} />
+                                <Route path="/chatroom-edit" render={(props) => (!AuthService.isLogin() ? (<Redirect to="/login" />) : (<ChatroomEdit {...props} />))} />
+
+                                {/* Reminder */}
+                                <Route path="/reminders" component={Reminder} />
+                                <Route path="/reminder-edit" render={(props) => (!AuthService.isLogin() ? (<Redirect to="/login" />) : (<ReminderEdit {...props} />))} />
 
                                 {/* Transfer */}
                                 <Route path="/transfer history" render={(props) => (!AuthService.isLogin() ? (<Redirect to="/login" />) : (<TransferHistory {...props} />))} />

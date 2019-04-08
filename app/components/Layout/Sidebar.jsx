@@ -14,6 +14,8 @@ class Sidebar extends React.Component {
             collapse: {
                 user: this.routeActive('user'),
                 team: this.routeActive('team'),
+                chatroom: this.routeActive('chatroom'),
+                reminder: this.routeActive('reminder'),
                 setting: this.routeActive('setting'),
 
                 elements: this.routeActive(['buttons', 'notifications', 'sweetalert', 'tour', 'carousel', 'spinners', 'animations', 'dropdown', 'nestable', 'sortable', 'panels', 'portlet', 'grid', 'grid-masonry', 'typography', 'icons-font', 'icons-weather', 'colors']),
@@ -117,7 +119,23 @@ class Sidebar extends React.Component {
                                     <em className="fa fa-group"></em>
                                     <span data-localize="sidebar.nav.TEAM">Team</span>
                                 </Link>
-                            </li>                         
+                            </li>   
+
+                            <li className={this.routeActive('chatrooms') ? 'active' : ''}>
+                                <Link to="chatrooms" title="chatrooms">
+                                    {/* <div className="pull-right label label-success">30</div> */}
+                                    <em className="fa fa-user-md"></em>
+                                    <span data-localize="sidebar.nav.CHATROOM">Chat Room</span>
+                                </Link>
+                            </li> 
+
+                            <li className={this.routeActive('reminders') ? 'active' : ''}>
+                                <Link to="reminders" title="reminders">
+                                    {/* <div className="pull-right label label-success">30</div> */}
+                                    <em className="fa fa-clock-o"></em>
+                                    <span data-localize="sidebar.nav.REMINDER">Reminder</span>
+                                </Link>
+                            </li>                       
 
                             <li className={this.routeActive('settings') ? 'active' : ''}>
                                 <Link to="settings" title="settings">
